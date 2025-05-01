@@ -1,0 +1,35 @@
+# System
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.bak
+
+# Logs
+*.log
+
+# Environment Files
+.env
+.env.*
+
+# Dependency directories
+node_modules/
+venv/
+__pycache__/
+.cache/
+dist/
+build/
+target/
+bin/
+lib/
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.code-workspace
+
+# OS or backup files
+*.tmp
+*.old
+*.orig
+*~
