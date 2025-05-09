@@ -1,0 +1,59 @@
+#!/usr/bin/env bash set -euo pipefail
+
+----------------------------------------------------------------------------
+
+DevBuddy create-project.sh — with GitHub owner support
+
+Automatically scaffolds a new GitHub repository and initializes it locally.
+
+----------------------------------------------------------------------------
+
+Load environment variables from .env if it exists
+
+ENV_FILE="$(dirname "$0")/.env" if [[ -f "$ENV_FILE" ]]; then set -o allexport source "$ENV_FILE" set +o allexport fi
+
+↓ NEW: your GitHub username for all SSH URLs
+
+GITHUB_OWNER="bl4z3d247" export GITHUB_OWNER
+
+Ensure GITHUB_OWNER is set
+
+if [[ -z "$GITHUB_OWNER" ]]; then echo "ERROR: GITHUB_OWNER is not set. Please add GITHUB_OWNER=<your-username> to your .env." >&2 exit 1 fi
+
+Validate arguments
+
+if [[ $# -ne 1 ]]; then echo "Usage: $0 <project-name>" exit 1 fi project_name="$1"
+
+1) Create the GitHub repository via API
+
+echo "[+] Creating GitHub repo: $project_name" curl -s -H "Authorization: token $GITHUB_TOKEN" 
+-d "{"name": "$project_name"}" 
+https://api.github.com/user/repos > /dev/null
+
+2) Clone the new repository via SSH
+
+echo "[+] Cloning locally..." git clone git@github.com:${GITHUB_OWNER}/${project_name}.git projects/${project_name} cd projects/${project_name}
+
+3) Create and switch to main branch
+
+echo "[+] Setting up main branch..." git checkout -b main
+
+4) Add template files
+
+echo "[+] Adding template..." echo "# $project_name" > README.md
+
+5) Commit and push initial scaffold
+
+echo "[+] Committing and pushing..." git add README.md git commit -m "Initial commit from DevBuddy automation" # Ensure origin is correct and push
+
+Update SSH remote URL with owner
+
+git remote set-url origin git@github.com:${GITHUB_OWNER}/${project_name}.git
+
+git push -u origin main
+
+Done
+
+echo "[✓] Project $project_name created and initialized."
+
+
