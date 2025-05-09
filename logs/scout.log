@@ -19524,3 +19524,4 @@ remove the file manually to continue.
 Everything up-to-date
 Setting up watches.  Beware: since -r was given, this may take a while!
 Watches established.
+src/modules/ CREATE self_index.py
