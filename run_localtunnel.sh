@@ -1,3 +1,3 @@
 #!/bin/bash
-echo "[LocalTunnel] Starting tunnel on port 8000..."
+echo "[LocalTunnel] Launching tunnel at subdomain quasar-dev..."
 npx localtunnel --port 8000 --subdomain quasar-dev --print-requests

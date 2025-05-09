@@ -19559,3 +19559,15 @@ Setting up watches.  Beware: since -r was given, this may take a while!
 Watches established.
 src/ CREATE telegram_server.py
 /home/deploy/projects/auto-dev/scope.sh: line 9: logs/scout.log: Permission denied
+[main 5b5de11] Auto-update from Scope @ 2025-05-09 00:41:51
+ 3 files changed, 43 insertions(+)
+ create mode 100755 run_localtunnel.sh
+ create mode 100644 src/telegram_server.py
+remote: This repository moved. Please use the new location:        
+remote:   git@github.com:BL4Z3D247/Quasar.git        
+To github.com:BL4Z3D247/quasar.git
+   44974c1..5b5de11  main -> main
+Setting up watches.  Beware: since -r was given, this may take a while!
+Watches established.
+src/ MODIFY telegram_server.py
+/home/deploy/projects/auto-dev/scope.sh: line 9: logs/scout.log: Permission denied
