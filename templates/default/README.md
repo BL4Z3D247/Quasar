@@ -1,1 +1,1 @@
-# Welcome to DevBuddy!
+# Welcome to Quasar!

@@ -8,10 +8,10 @@ Output:
 ✅ Command Output:
 Logging works!
 ------------------------------------------------------------
-[2025-05-06 16:33:07] Command: echo DevBuddy is alive!
+[2025-05-06 16:33:07] Command: echo Quasar is alive!
 Output:
 ✅ Command Output:
-DevBuddy is alive!
+Quasar is alive!
 ------------------------------------------------------------
 [2025-05-06 16:36:23] Command: echo mission accomplished.
 Output:

@@ -2,7 +2,7 @@
 
 ----------------------------------------------------------------------------
 
-DevBuddy create-project.sh — with GitHub owner support
+Quasar create-project.sh — with GitHub owner support
 
 Automatically scaffolds a new GitHub repository and initializes it locally.
 
@@ -44,7 +44,7 @@ echo "[+] Adding template..." echo "# $project_name" > README.md
 
 5) Commit and push initial scaffold
 
-echo "[+] Committing and pushing..." git add README.md git commit -m "Initial commit from DevBuddy automation" # Ensure origin is correct and push
+echo "[+] Committing and pushing..." git add README.md git commit -m "Initial commit from Quasar automation" # Ensure origin is correct and push
 
 Update SSH remote URL with owner
 
