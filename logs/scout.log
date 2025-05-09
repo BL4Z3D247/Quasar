@@ -19525,3 +19525,26 @@ Everything up-to-date
 Setting up watches.  Beware: since -r was given, this may take a while!
 Watches established.
 src/modules/ CREATE self_index.py
+/home/deploy/projects/auto-dev/scope.sh: line 9: logs/scout.log: Permission denied
+fatal: Unable to create '/home/deploy/projects/auto-dev/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+[main b18340f] Auto-update from Scope @ 2025-05-09 00:37:10
+ 6 files changed, 64 insertions(+)
+ create mode 100644 .github/workflows/deploy.yml
+ create mode 100644 api_server.py
+ create mode 100644 src/modules/project_template_picker.py
+ create mode 100644 src/modules/self_index.py
+ create mode 100644 src/modules/self_reflect.py
+remote: This repository moved. Please use the new location:        
+remote:   git@github.com:BL4Z3D247/Quasar.git        
+To github.com:BL4Z3D247/quasar.git
+ * [new branch]      main -> main
+Setting up watches.  Beware: since -r was given, this may take a while!
+Watches established.
+src/ CREATE server.py
+/home/deploy/projects/auto-dev/scope.sh: line 9: logs/scout.log: Permission denied
